@@ -1,128 +1,196 @@
-/* Alap stílusok és reszponzív dizájn */
-
+/* Reset alapok */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Body alap stílusok */
 body {
-    background-color: #f4f4f4;
+    background-color: #f7f7f7;
     color: #333;
-    line-height: 1.6;
+    font-size: 16px;
 }
 
-header {
-    background-color: #333;
+/* Fejléc */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar .logo {
     color: #fff;
-    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-nav ul {
+.nav-links {
     list-style: none;
-    text-align: center;
+    display: flex;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 20px;
+.nav-links li {
+    margin-left: 30px;
 }
 
-nav ul li a {
+.nav-links li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
+.nav-links li a:hover {
+    color: #3498db;
+}
+
+/* Hero szekció */
 .hero {
-    background-color: #3498db;
-    color: #fff;
-    padding: 100px 20px;
+    background: url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    color: #fff;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: 40px;
 }
 
 .cta-button {
-    background-color: #fff;
-    color: #3498db;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: #fff;
     font-size: 18px;
-    text-decoration: none;
     border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #2980b9;
-    color: #fff;
 }
 
-section {
-    padding: 60px 20px;
+/* Rólunk szekció */
+.about-section {
+    background-color: #fff;
+    padding: 80px 20px;
     text-align: center;
 }
 
-section h2 {
+.about-section h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-section p {
+.about-section p {
     font-size: 18px;
+}
+
+/* Szolgáltatások szekció */
+.services-section {
+    background-color: #ecf0f1;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service {
+    background-color: #fff;
+    padding: 30px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.service p {
+    font-size: 18px;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+/* Kapcsolat szekció */
+.contact-section {
+    background-color: #3498db;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
-ul {
-    list-style: none;
+.contact-section p {
     font-size: 18px;
 }
 
-ul li {
-    margin-bottom: 10px;
-}
-
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Reszponzív dizájn */
+/* Animációk */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.hero-content {
+    animation: fadeIn 2s ease;
+}
+
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 36px;
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero p {
-        font-size: 16px;
+    .service-list {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .cta-button {
-        font-size: 16px;
-    }
-
-    section h2 {
-        font-size: 28px;
-    }
-
-    section p {
-        font-size: 16px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    .service {
+        width: 80%;
+        margin-bottom: 20px;
     }
 }
