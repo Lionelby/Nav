@@ -3,37 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTA Szerver Navigáció</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Professzionális weboldal tervezés, modern dizájn és funkciók.">
+    <title>Professzionális Weboldal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigációs sáv -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#">MTA Szerver</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Kezdőlap</a></li>
-            <li><a href="#">Szabályok</a></li>
-            <li><a href="#">Kapcsolat</a></li>
-            <li><a href="#">Letöltések</a></li>
-        </ul>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Kezdőlap</a></li>
+                <li><a href="#about">Rólunk</a></li>
+                <li><a href="#services">Szolgáltatások</a></li>
+                <li><a href="#contact">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="content">
-        <h1>Üdvözlünk az MTA Szerverünkön!</h1>
-        <p>Használja a navigációs sávot a weboldalon való könnyű navigáláshoz.</p>
-    </div>
-    
-    <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-    </script>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Üdvözöllek a legprofibb weboldalon!</h1>
+            <p>Minimalista dizájn, gyors betöltődés, és reszponzív felület minden eszközhöz.</p>
+            <a href="#services" class="cta-button">Tudj meg többet</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Rólunk</h2>
+        <p>Mi segítünk, hogy weboldalad a legprofibb módon nézzen ki. Modern dizájn és fejlett technológiák.</p>
+    </section>
+
+    <section id="services">
+        <h2>Szolgáltatások</h2>
+        <ul>
+            <li>Weboldal tervezés</li>
+            <li>E-commerce fejlesztés</li>
+            <li>SEO optimalizálás</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Kapcsolat</h2>
+        <p>Írj nekünk a következő elérhetőségeink egyikén:</p>
+        <address>
+            <p>Email: info@weboldal.hu</p>
+            <p>Telefon: +36 30 123 4567</p>
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Professzionális Weboldal | Minden jog fenntartva.</p>
+    </footer>
 </body>
 </html>
