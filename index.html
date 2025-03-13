@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professzionális weboldal tervezés, modern dizájn és funkciók.">
-    <title>Professzionális Weboldal</title>
+    <meta name="description" content="Kreatív és egyedi weboldal, professzionális dizájn és fejlesztés.">
+    <title>Professzionális Weboldal - Egyedi Dizájn</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.10.0/dist/gsap.min.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="logo">LOGO</div>
+            <ul class="nav-links">
                 <li><a href="#home">Kezdőlap</a></li>
                 <li><a href="#about">Rólunk</a></li>
                 <li><a href="#services">Szolgáltatások</a></li>
@@ -21,29 +23,40 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Üdvözöllek a legprofibb weboldalon!</h1>
-            <p>Minimalista dizájn, gyors betöltődés, és reszponzív felület minden eszközhöz.</p>
+            <h1>Üdvözöllek a legkreatívabb weboldalon!</h1>
+            <p>Ha valami egyedit keresel, mi segítünk megvalósítani.</p>
             <a href="#services" class="cta-button">Tudj meg többet</a>
         </div>
     </section>
 
-    <section id="about">
-        <h2>Rólunk</h2>
-        <p>Mi segítünk, hogy weboldalad a legprofibb módon nézzen ki. Modern dizájn és fejlett technológiák.</p>
+    <section id="about" class="about-section">
+        <div class="content">
+            <h2>Mi vagyunk a kreatív csapat</h2>
+            <p>Mi az egyediségre törekszünk, hogy weboldalad ne csak szép, hanem kiemelkedjen a versenytársak közül.</p>
+        </div>
     </section>
 
-    <section id="services">
-        <h2>Szolgáltatások</h2>
-        <ul>
-            <li>Weboldal tervezés</li>
-            <li>E-commerce fejlesztés</li>
-            <li>SEO optimalizálás</li>
-        </ul>
+    <section id="services" class="services-section">
+        <h2>Szolgáltatásaink</h2>
+        <div class="service-list">
+            <div class="service">
+                <h3>Weboldal tervezés</h3>
+                <p>Modern és kreatív megoldások, amelyek a legújabb technológiákat használják.</p>
+            </div>
+            <div class="service">
+                <h3>SEO optimalizálás</h3>
+                <p>Weboldalad a legjobb helyezéseket éri el a keresőkben.</p>
+            </div>
+            <div class="service">
+                <h3>E-commerce fejlesztés</h3>
+                <p>Hatékony online áruházak, amelyek a vásárlókat vonzzák.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <h2>Kapcsolat</h2>
-        <p>Írj nekünk a következő elérhetőségeink egyikén:</p>
+        <p>Keress minket, és építsünk együtt valami különlegeset!</p>
         <address>
             <p>Email: info@weboldal.hu</p>
             <p>Telefon: +36 30 123 4567</p>
@@ -53,5 +66,7 @@
     <footer>
         <p>&copy; 2025 Professzionális Weboldal | Minden jog fenntartva.</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
